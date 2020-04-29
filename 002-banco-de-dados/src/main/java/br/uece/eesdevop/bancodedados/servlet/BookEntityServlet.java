@@ -1,9 +1,8 @@
 package br.uece.eesdevop.bancodedados.servlet;
 
 import br.uece.eesdevop.bancodedados.model.BookEntity;
+import br.uece.eesdevop.bancodedados.util.GsonUtil;
 import br.uece.eesdevop.bancodedados.util.HibernateUtil;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -20,12 +19,10 @@ import java.util.List;
 public class BookEntityServlet extends HttpServlet {
 
     private EntityManager entityManager;
-    private Gson gson;
 
     @Override
     public void init() {
         entityManager = HibernateUtil.INSTANCE.getEntityManagerFactory().createEntityManager();
-        gson = new GsonBuilder().create();
     }
 
     @Override
@@ -45,7 +42,7 @@ public class BookEntityServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        BookRequest request = gson.fromJson(req.getReader(), BookRequest.class);
+        BookRequest request = GsonUtil.INSTANCE.parse(req.getReader(), BookRequest.class);
 
         if (entityManager != null && entityManager.isOpen()) {
             EntityTransaction transaction = entityManager.getTransaction();
@@ -77,8 +74,8 @@ public class BookEntityServlet extends HttpServlet {
 
     private static class BookRequest {
 
-        public final String title;
-        public final String author;
+        final String title;
+        final String author;
 
         public BookRequest(String title, String author) {
             this.title = title;

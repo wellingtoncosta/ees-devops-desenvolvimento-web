@@ -19,7 +19,7 @@
     </dependencies>
 
     <build>
-        <finalName>introducao-java-web</finalName>
+        <finalName>001-introducao-java-web</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

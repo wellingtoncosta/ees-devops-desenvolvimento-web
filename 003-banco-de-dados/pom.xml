@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.uece.eesdevops</groupId>
-    <artifactId>002-banco-de-dados</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>003-banco-de-dados</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <dependencies>
@@ -40,7 +40,7 @@
     </dependencies>
 
     <build>
-        <finalName>002-banco-de-dados</finalName>
+        <finalName>003-banco-de-dados</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

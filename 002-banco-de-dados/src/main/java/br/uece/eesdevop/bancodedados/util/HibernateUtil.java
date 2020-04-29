@@ -20,4 +20,5 @@ public enum HibernateUtil {
     public EntityManagerFactory getEntityManagerFactory() {
         return entityManagerFactory;
     }
+
 }
