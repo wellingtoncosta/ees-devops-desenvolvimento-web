@@ -1,0 +1,9 @@
+CREATE SEQUENCE bills_sequence;
+
+CREATE TABLE bills (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    amount_due NUMERIC(19,4) NOT NULL,
+    due_date DATE NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
