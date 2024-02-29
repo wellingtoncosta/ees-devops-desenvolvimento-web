@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group = 'br.uece.ees'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    runtimeOnly 'org.postgresql:postgresql:42.6.1'
+}
