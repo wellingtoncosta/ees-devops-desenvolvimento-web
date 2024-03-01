@@ -21,7 +21,7 @@ public class BillApplicationService {
                 .collect(Collectors.toList());
     }
 
-    public BillDto save(BillDto dto) {
+    public BillDto save(NewBillDto dto) {
         var created = repository.save(dto.toEntity());
         return BillDto.from(created);
     }

@@ -26,7 +26,7 @@ public class BillController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<BillDto> save(@RequestBody BillDto dto) {
+    public ResponseEntity<BillDto> save(@RequestBody NewBillDto dto) {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(applicationService.save(dto));
