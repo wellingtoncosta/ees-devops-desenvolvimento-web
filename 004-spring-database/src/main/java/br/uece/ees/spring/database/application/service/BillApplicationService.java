@@ -1,5 +1,8 @@
-package br.uece.ees.spring.database;
+package br.uece.ees.spring.database.application.service;
 
+import br.uece.ees.spring.database.application.model.BillDto;
+import br.uece.ees.spring.database.domain.BillRepository;
+import br.uece.ees.spring.database.application.model.NewBillDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

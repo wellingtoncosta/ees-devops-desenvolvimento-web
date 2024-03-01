@@ -1,30 +1,38 @@
-package br.uece.ees.spring.database;
+package br.uece.ees.spring.database.application.model;
 
-import jakarta.persistence.*;
+import br.uece.ees.spring.database.domain.BillEntity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "bills")
-public class BillEntity {
+public class BillDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "title", nullable = false)
     private String title;
-
-    @Column(name = "amount_due", nullable = false)
     private BigDecimal amountDue;
-
-    @Column(name = "due_date", nullable = false)
     private LocalDate dueDate;
-
-    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    public static BillDto from(BillEntity entity) {
+        BillDto dto = new BillDto();
+        dto.setId(entity.getId());
+        dto.setTitle(entity.getTitle());
+        dto.setAmountDue(entity.getAmountDue());
+        dto.setDueDate(entity.getDueDate());
+        dto.setCreatedAt(entity.getCreatedAt());
+        return dto;
+    }
+
+    public BillEntity toEntity() {
+        BillEntity entity = new BillEntity();
+        entity.setId(id);
+        entity.setTitle(title);
+        entity.setAmountDue(amountDue);
+        entity.setDueDate(dueDate);
+        entity.setCreatedAt(createdAt);
+        return entity;
+    }
 
     public Long getId() {
         return id;
@@ -64,16 +72,5 @@ public class BillEntity {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
-    }
-
-    @Override
-    public String toString() {
-        return "BillEntity{" +
-                "id=" + id +
-                ", title=" + title +
-                ", amountDue=" + amountDue +
-                ", dueDate=" + dueDate +
-                ", createdAt=" + createdAt +
-                '}';
     }
 }

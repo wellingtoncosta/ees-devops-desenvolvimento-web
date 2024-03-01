@@ -1,5 +1,8 @@
-package br.uece.ees.spring.database;
+package br.uece.ees.spring.database.controller;
 
+import br.uece.ees.spring.database.application.model.BillDto;
+import br.uece.ees.spring.database.application.model.NewBillDto;
+import br.uece.ees.spring.database.application.service.BillApplicationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

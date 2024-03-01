@@ -1,4 +1,6 @@
-package br.uece.ees.spring.database;
+package br.uece.ees.spring.database.application.model;
+
+import br.uece.ees.spring.database.domain.BillEntity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

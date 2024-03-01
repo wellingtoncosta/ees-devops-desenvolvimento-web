@@ -1,4 +1,4 @@
-package br.uece.ees.spring.database;
+package br.uece.ees.spring.database.domain;
 
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;
