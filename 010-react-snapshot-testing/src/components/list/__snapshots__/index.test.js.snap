@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersList tests renders correctly when it is loading 1`] = `
+<div>
+  <nav
+    className="bg-dark navbar navbar-expand navbar-light"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <div
+        className="ms-4 text-white fs-3"
+      >
+        Github Users
+      </div>
+    </span>
+  </nav>
+  <div
+    className="text-center mt-5"
+  >
+    <div
+      className="spinner-border"
+    />
+  </div>
+</div>
+`;
+
+exports[`UsersList tests renders correctly when there are no users 1`] = `
+<div>
+  <nav
+    className="bg-dark navbar navbar-expand navbar-light"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <div
+        className="ms-4 text-white fs-3"
+      >
+        Github Users
+      </div>
+    </span>
+  </nav>
+  <div
+    className="text-center mt-5 fs-3"
+  >
+    There are no results to show.
+  </div>
+</div>
+`;
+
+exports[`UsersList tests renders correctly when there is an error 1`] = `
+<div>
+  <nav
+    className="bg-dark navbar navbar-expand navbar-light"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <div
+        className="ms-4 text-white fs-3"
+      >
+        Github Users
+      </div>
+    </span>
+  </nav>
+  <div
+    className="text-center text-danger mt-5 fs-3"
+  >
+    Unable to load users
+  </div>
+</div>
+`;
+
+exports[`UsersList tests renders correctly when there is an user 1`] = `
+<div>
+  <nav
+    className="bg-dark navbar navbar-expand navbar-light"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <div
+        className="ms-4 text-white fs-3"
+      >
+        Github Users
+      </div>
+    </span>
+  </nav>
+  <div
+    className="list-group"
+    onKeyDown={[Function]}
+  >
+    <button
+      className="list-group-item list-group-item-action"
+      data-rr-ui-event-key={null}
+      onClick={[Function]}
+    >
+      <div
+        className="hstack"
+      >
+        <div
+          className="p-2"
+        >
+          <img
+            alt="Avatar"
+            style={
+              Object {
+                "borderRadius": "50%",
+                "width": "4em",
+              }
+            }
+          />
+        </div>
+        <div
+          className="p-2"
+        >
+          <div
+            className="fw-semibold"
+          >
+            User 1
+          </div>
+          <div
+            className="fw-light"
+          >
+            @
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+`;

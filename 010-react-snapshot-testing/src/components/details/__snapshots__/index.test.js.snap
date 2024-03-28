@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDetails tests renders correctly when it is loading 1`] = `
+<div>
+  <nav
+    className="bg-dark navbar navbar-expand navbar-light"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <div
+        className="ms-4 text-white fs-3"
+      >
+        Github Users
+      </div>
+    </span>
+  </nav>
+  <div
+    className="text-center mt-5"
+  >
+    <div
+      className="spinner-border"
+    />
+  </div>
+</div>
+`;
+
+exports[`UserDetails tests renders correctly when the user is found 1`] = `
+<div>
+  <nav
+    className="bg-dark navbar navbar-expand navbar-light"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <div
+        className="ms-4 text-white fs-3"
+      >
+        Github Users
+      </div>
+    </span>
+  </nav>
+  <div>
+    <div
+      className="m-2 card"
+    >
+      <div
+        className="hstack"
+      >
+        <div
+          className="p-2"
+        >
+          <img
+            alt="Avatar"
+            style={
+              Object {
+                "borderRadius": "50%",
+                "width": "20em",
+              }
+            }
+          />
+        </div>
+        <div
+          className="ms-5 p-2"
+        >
+          <div
+            className="fs-1 fw-semibold"
+          >
+            User 1
+          </div>
+          <div
+            className="fs-2 fw-light"
+          >
+            @
+          </div>
+          <div
+            className="mt-1"
+          />
+          <div
+            className="fs-5 fw-light"
+          >
+            Public repositories: 
+          </div>
+          <div
+            className="fs-5 fw-light"
+          >
+            Followers: 
+          </div>
+          <div
+            className="fs-5 fw-light"
+          >
+            Following: 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="m-2 card"
+    >
+      <div
+        className="fs-3 card-header"
+      >
+        Repositories
+      </div>
+      <div
+        className="list-group list-group-flush"
+        onKeyDown={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UserDetails tests renders correctly when the user is not found 1`] = `
+<div>
+  <nav
+    className="bg-dark navbar navbar-expand navbar-light"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <div
+        className="ms-4 text-white fs-3"
+      >
+        Github Users
+      </div>
+    </span>
+  </nav>
+  <div
+    className="text-center text-danger mt-5 fs-3"
+  >
+    Unable to load users
+  </div>
+</div>
+`;
